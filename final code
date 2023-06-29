@@ -1,0 +1,16 @@
+class Solution(object):
+    def findComplement(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+
+        bin_num = bin(num)[2:]
+        binary = list(bin_num)
+        for i in range(0,len(binary)):
+            if binary[i] == '1':
+                binary[i] = '0'
+            else:
+                binary[i] ='1'
+        reverse = ''.join(binary)
+        return(int(reverse,2))
